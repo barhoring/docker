@@ -1,11 +1,13 @@
-FROM node:12-stretch
-USER node
-RUN mkdir /home/node/code
+FROM node:12.10.0
 
-# now USER node owns the workdir and can do npm ci
-WORKDIR /home/node/code
-COPY --chown=node:node package-lock.json package.json ./
+WORKDIR /usr/app
 
-RUN npm i
-COPY --chown=node:node . .
+COPY package*.json ./
+
+RUN npm ci -qy
+
+COPY . .
+
+EXPOSE 3000
+
 CMD ["npm", "start"]
