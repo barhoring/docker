@@ -1,0 +1,9 @@
+version: "2"
+services:
+  react:
+    build:
+      context: ./frontend # Either a path to a directory containing a Dockerfile, or a url to a git repository.
+    command: "npm start"
+    volumes:
+      - ./frontend:/usr/app
+      - /usr/app/node_modules
