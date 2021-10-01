@@ -2,7 +2,7 @@ version: "2"
 services:
   react:
     build:
-      context: ./
+      context: ./ # Either a path to a directory containing a Dockerfile, or a url to a git repository.
     command: "npm start"
     volumes:
       - ./:/usr/app
