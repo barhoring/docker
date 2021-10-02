@@ -7,3 +7,14 @@ services:
     volumes:
       - ./frontend:/usr/app
       - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+  express:
+    build:
+      context: ./backend
+    command: "node index.js"
+    volumes:
+      - ./backend:/usr/app
+      - usr/app/node_modules
+    ports:
+      - "3001:3001"

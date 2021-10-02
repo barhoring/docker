@@ -1,3 +1,4 @@
+import Counter from "./Counter";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -6,7 +7,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hot Reloading React with Express</p>
+        <p>Hot Reloading React with Express11</p>
+        <Counter />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
